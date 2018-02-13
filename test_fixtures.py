@@ -41,3 +41,19 @@ class Test:
     def test_2(self, before):
         print('test_class_2()')
 """
+
+
+
+
+
+"""
+@pytest.fixture(params=[1, 2, 3])
+def test_data(request):
+    return request.param
+
+
+# @pytest.mark.skipif(test_data == 2, reason='Because test is failed')
+def test_not_2(test_data):
+    print('test_data: {}'.format(test_data))
+    assert test_data != 2
+"""
