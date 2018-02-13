@@ -22,3 +22,22 @@ def test_3():
 @pytest.mark.usefixtures("before")
 def test_4():
     print('test_4()')
+    
+    
+"""
+import pytest
+
+
+@pytest.fixture()
+def before():
+    print('\nbefore each test')
+
+
+class Test:
+    
+    def test_1(self, before):
+        print('test_class_1()')
+
+    def test_2(self, before):
+        print('test_class_2()')
+"""
