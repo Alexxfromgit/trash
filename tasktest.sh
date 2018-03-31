@@ -24,9 +24,8 @@ echo "Processes running: `ps -e | wc -l`"
 echo "Users logged in: `uptime | cut -d "," -f 3 | cut -d " " -f 3`"
 
 echo "--- Network ---"
-for iface in $(ip addr list| grep "UP" | awk '{print $2}'|cut -d ":" -f 1|cut -d "@" -f 1)
+for Iface in $(ip addr list | grep "UP" | awk '{print $2}' | cut -d ":" -f 1 | cut -d "@" -f 1)
    do
-	IP=`ip addr list $iface | grep "inet "|awk '{print $2}'`
-	if [ -z "${IP// /}" ] ; then IP="-" ; fi
-	echo "$iface: $IP"
+	IP=`ip addr list $Iface | grep "inet " | awk '{print $2}'`
+	echo "$Iface: $IP"
 done
