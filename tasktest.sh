@@ -6,7 +6,7 @@ exec 1>$out_file
 BaseBoard1=`dmidecode -s baseboard-manufacturer`
 BaseBoard2=`dmidecode -s baseboard-product-name`
 
-BaseBoard=$BaseBoard1$ BaseBoard2
+BaseBoard=$BaseBoard1$BaseBoard2
 
 SSN=`dmidecode -s system-serial-number`
 
