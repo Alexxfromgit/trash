@@ -10,7 +10,7 @@ BaseBoard=$BaseBoard1$BaseBoard2
 
 echo "--- Hardware ---"
 echo "CPU: `cat /proc/cpuinfo | grep "model name" -m1 | cut -c14-`" 
-echo "RAM: `cat /proc/meminfo | grep MemTotal | awk '{print $2" " $3}'`" 
+echo "RAM: `cat /proc/meminfo | grep MemTotal | awk '{print $2$3}'`" 
 echo "Motherboard: $BaseBoard"
 echo "System Serial Number: `dmidecode -s system-serial-number`"
 
