@@ -1,16 +1,14 @@
 #!/bin/bash
 
-out_file=`dirname $0`"/task4_1.out"
-exec 1>$out_file
+output_file=`dirname $0`"/task4_1.out"
+exec 1>$output_file
 
 BaseBoard1=`dmidecode -s baseboard-manufacturer`
 BaseBoard2=`dmidecode -s baseboard-product-name`
 
 BaseBoard=$BaseBoard1$BaseBoard2
 
-SSN=`dmidecode -s system-serial-number`
-
-echo "--- HardWare --"
+echo "--- Hardware ---"
 echo "CPU: `cat /proc/cpuinfo | grep "model name" -m1 | cut -c14-`" 
 echo "RAM: `cat /proc/meminfo | grep MemTotal | awk '{print $2" " $3}'`" 
 echo "Motherboard: $BaseBoard"
