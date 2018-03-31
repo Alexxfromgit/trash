@@ -28,4 +28,4 @@ for Iface in $(ip addr list | grep "UP" | awk '{print $2}' | cut -d ":" -f 1 | c
    do
 	IP=`ip addr list $Iface | grep "inet " | awk '{print $2}'`
 	echo "$Iface: $IP"
-done
+   done
